@@ -2,14 +2,24 @@
  * @description Home page
  * @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
  */
-import data from '@/data'
+import data, {Quiz} from '@/data'
+import {Suspense} from 'react'
+import Link from 'next/link'
 
-function QuizList() {
+async function getQuizzes(): Promise<Quiz[]> {
+  'use server'
+
+  return await new Promise((resolve) => setTimeout(() => resolve(data), 2000))
+}
+
+async function QuizList() {
+  const quizzes = await getQuizzes()
+
   return (
     <ul className="flex flex-col justify-center items-center m-3">
-      {data.map((quiz, i) => (
+      {quizzes.map((quiz, i) => (
         <li key={i} className="mt-1">
-          {quiz.title}
+          <Link href={`/quiz/${i + 1}`}>{quiz.title}</Link>
         </li>
       ))}
     </ul>
@@ -18,9 +28,12 @@ function QuizList() {
 
 export default function Home() {
   return (
-    <div className="m-2">
-      <h1 className="text-2xl font-bold">Quizzes</h1>
-      <QuizList />
-    </div>
+    <>
+      <h1 className="text-2xl font-bold mb-3">Quizzes</h1>
+
+      <Suspense fallback={<div>Loading...</div>}>
+        <QuizList />
+      </Suspense>
+    </>
   )
 }

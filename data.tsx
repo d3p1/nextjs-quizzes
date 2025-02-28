@@ -2,7 +2,7 @@
  * @description Data
  * @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
  */
-type Quiz = {
+export type Quiz = {
   title: string
   question: string
   answers: {

@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${roboto.className} antialiased flex flex-col justify-center items-center`}
+        className={`${roboto.className} antialiased flex flex-col justify-center items-center m-3`}
       >
         {children}
       </body>
