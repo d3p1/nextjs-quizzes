@@ -9,9 +9,7 @@
 
 ## Introduction
 
-Just studying and practicing my [Next.js](https://nextjs.org/) skills, implementing the [quizzes](https://www.youtube.com/watch?v=h2BcitZPMn4&ab_channel=leerob) tutorial:
-
-[![Introduction to Next.js and React](https://img.youtube.com/vi/h2BcitZPMn4/maxresdefault.jpg)](https://www.youtube.com/watch?v=h2BcitZPMn4)
+Just studying and practicing my [Next.js](https://nextjs.org/) skills, implementing the [quizzes](https://www.youtube.com/watch?v=h2BcitZPMn4&ab_channel=leerob) tutorial.
 
 ## Changelog
 
