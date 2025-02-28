@@ -26,7 +26,7 @@ async function QuizList() {
   )
 }
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <h1 className="text-2xl font-bold mb-3">Quizzes</h1>
