@@ -1,3 +1,16 @@
+# [1.2.0](https://github.com/d3p1/nextjs-quizzes/compare/v1.1.0...v1.2.0) (2025-03-01)
+
+
+### Bug Fixes
+
+* adjust show answer button in quiz page [[#1](https://github.com/d3p1/nextjs-quizzes/issues/1)] ([8543631](https://github.com/d3p1/nextjs-quizzes/commit/8543631d7fe05cc1389a7b03285dfb28d20b9d12))
+
+
+### Features
+
+* add use action state to process quiz show answer [[#1](https://github.com/d3p1/nextjs-quizzes/issues/1)] ([c97a17a](https://github.com/d3p1/nextjs-quizzes/commit/c97a17aa97e8e79229f34b5dcd2188a19ee617a6))
+* implement add quiz [[#1](https://github.com/d3p1/nextjs-quizzes/issues/1)] ([0c1699c](https://github.com/d3p1/nextjs-quizzes/commit/0c1699c19f0bffa50ab30b99ac104a3d146e04cc))
+
 # [1.1.0](https://github.com/d3p1/nextjs-quizzes/compare/v1.0.0...v1.1.0) (2025-02-28)
 
 
