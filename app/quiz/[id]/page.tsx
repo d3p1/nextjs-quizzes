@@ -50,7 +50,7 @@ export default async function QuizPage({
             type="submit"
             className="bg-gray-300 hover:bg-gray-400 transition-colors p-4 rounded-md"
           >
-            Show Answer
+            Show
           </button>
         )}
       </form>
