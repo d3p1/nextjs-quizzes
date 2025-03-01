@@ -2,22 +2,8 @@
  * @description Quiz page
  * @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
  */
-import data, {Quiz} from '@/data'
-import {redirect} from 'next/navigation'
-
-async function showAnswer(quizId: number) {
-  'use server'
-  redirect(`/quiz/${quizId}?isShownAnswer=true`)
-}
-
-async function getQuizById(id: number): Promise<Quiz> {
-  'use server'
-
-  const index = id - 1
-  return await new Promise((resolve) =>
-    setTimeout(() => resolve(data[index]), 2000),
-  )
-}
+import {getQuizById} from '@/app/quiz/[id]/actions'
+import QuizForm from '@/app/quiz/[id]/form'
 
 export default async function QuizPage({
   params,
@@ -29,7 +15,6 @@ export default async function QuizPage({
   const {id} = await params
   const {isShownAnswer} = await searchParams
   const quiz = await getQuizById(id)
-  const showAnswerAction = showAnswer.bind(null, id)
 
   return (
     <>
@@ -44,16 +29,8 @@ export default async function QuizPage({
           </li>
         ))}
       </ul>
-      <form className="mt-4" action={showAnswerAction}>
-        {isShownAnswer !== 'true' && (
-          <button
-            type="submit"
-            className="bg-gray-300 hover:bg-gray-400 transition-colors p-4 rounded-md"
-          >
-            Show
-          </button>
-        )}
-      </form>
+
+      <QuizForm id={id} isShownAnswer={isShownAnswer} />
     </>
   )
 }
